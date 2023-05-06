@@ -38,7 +38,7 @@ const result3 = createArray<Name>({ name: 'Bangladesh' });
 // If we use 'Object' type instead of 'T' then it will spread in compile time.
 // so, if we mouse hover in result4 we cann't see property of myInfo.
 // but, For using 'T'(generic type) now, if we mouse hover in result4
-// we can see property of myInfo.
+// we can see property of myInfo. that's a advantage of generic type.
 
 const addMe = <T>(myInfo: T) => {
     const crush = 'dilara yasmin';

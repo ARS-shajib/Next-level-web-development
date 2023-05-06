@@ -28,3 +28,20 @@ const result5 = addMe1(myInfo1);
 const result6 = addMe1(yourInfo);
 console.log(result5);
 console.log(result6);
+
+//-----------------keyof----------------------
+
+type Person = {
+    name: string;
+    age: number;
+    address: string;
+}
+
+type PersonType = keyof Person; // type PersonType = 'name'|'age'|'address';
+
+function getProperty<X, Y extends keyof X>(obj: X, key: Y) {
+    return obj[key];
+}
+
+const property = getProperty({ name: 'Abdur Rahman', age: 100 }, 'name');
+console.log(property);
